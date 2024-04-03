@@ -1,7 +1,7 @@
 const CLI = require("./lib/cli");
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { triangle, square, circle, } = require('./lib/shapes');
+const { Triangle, Square, Circle, } = require('./lib/shapes');
 
 class CLI {
     async run() {
@@ -47,13 +47,17 @@ class CLI {
         default:
           throw new Error('Invalid shape selected');
     }
-      }
-    }
-}
+
 
 
 fs.writeFileSync('logo.svg', SVGTextContentElement);
 console.log('Generated SVG logo');
+} catch (error) {
+  console.error('An error has occured: ', error);
+}
+    }
+  }
+
 
 
 
